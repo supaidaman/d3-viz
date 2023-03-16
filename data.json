@@ -1,0 +1,31 @@
+{
+    "name": "Node 1",
+    "id": 1,
+    "children": [{
+            "name": "Node 2",
+            "id": 2,
+            "children": [{
+                    "name": "Node 3",
+                    "id": 3
+                },
+                {
+                    "name": "Node 4",
+                    "id": 4
+                }
+            ]
+        },
+        {
+            "name": "Node 5",
+            "id": 5,
+            "children": [{
+                    "name": "Node 6",
+                    "id": 6
+                },
+                {
+                    "name": "Node 7",
+                    "id": 7
+                }
+            ]
+        }
+    ]
+}
