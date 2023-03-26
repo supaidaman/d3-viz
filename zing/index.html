@@ -40,16 +40,16 @@
       >
       <label for="tree-aspect">Layout</label>
       <select id="tree-aspect">
-        <option value="tree-down">Top Down</option>
-        <option value="tree-right" selected>Right to left</option>
+        <option value="tree-down" selected>Top Down</option>
+        <option value="tree-right">Right to left</option>
         <option value="tree-left">Left to right</option>
         <option value="tree-up">Bottom up</option>
         <option value="tree-radial">Circle</option>
       </select>
       <label for="tree-node">Node Connector Type</label>
       <select id="tree-node">
-        <option value="side-between">Side Between</option>
-        <option value="arc" selected>Arc</option>
+        <option value="side-between" selected>Side Between</option>
+        <option value="arc">Arc</option>
         <option value="line">Line</option>
         <option value="side-before">Side Before</option>
         <option value="side-after">Side After</option>
@@ -82,63 +82,1818 @@
       window.addEventListener("load", () => {
         let chartData = [
           {
-            id: "theworld",
+            id: "CONSTITUICAO_1988",
             parent: "",
-            name: "The World",
+            name: "Constituição",
           },
           {
-            id: "asia",
-            parent: "theworld",
-            name: "Asia",
-            value: 4100000000,
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit1",
+            name: "Art. 1º",
           },
           {
-            id: "africa",
-            parent: "theworld",
-            name: "Africa",
-            value: 1260000000,
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit1",
+            name: "Art. 2º",
           },
           {
-            id: "america",
-            parent: "theworld",
-            name: "America",
-            value: 328000000,
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art3",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit1",
+            name: "Art. 3º",
           },
           {
-            id: "europe",
-            parent: "theworld",
-            name: "Europe",
-            value: 741000000,
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art4",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit1",
+            name: "Art. 4º",
           },
           {
-            id: "ca",
-            parent: "america",
-            name: "California",
-            value: 32000000,
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit1",
+            parent: "CONSTITUICAO_1988",
+            name: "TÍTULO I",
+            text: "Dos Princípios Fundamentais",
           },
           {
-            id: "ny",
-            parent: "america",
-            name: "New York",
-            value: 19000000,
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art5",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 5º",
           },
           {
-            id: "txt",
-            parent: "america",
-            name: "Texas",
-            value: 29000000,
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art6",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 6º",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art7",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 7º",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art8",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 8º",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art9",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 9º",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art10",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 10.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art11",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 11.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art12",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 12.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art13",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 13.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art14",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 14.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art15",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 15.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art16",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 16.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art17",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            name: "Art. 17.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit2",
+            parent: "CONSTITUICAO_1988",
+            name: "TÍTULO II",
+            text: "Dos Direitos e Garantias Fundamentais",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art18",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 18.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art19",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 19.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art20",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 20.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art21",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 21.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art22",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 22.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art23",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 23.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art24",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 24.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art25",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 25.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art26",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 26.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art27",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 27.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art28",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 28.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art29",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 29.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art29-1,emc-25-2000-02-14",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 29-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art30",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 30.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art31",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 31.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art32",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap5_sec1",
+            name: "Art. 32.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap5_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art33",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap5_sec2",
+            name: "Art. 33.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap5_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art34",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 34.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art35",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 35.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art36",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Art. 36.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art37",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec1",
+            name: "Art. 37.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art38",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec1",
+            name: "Art. 38.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art39",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec2",
+            name: "Art. 39.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art40",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec2",
+            name: "Art. 40.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art41",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec2",
+            name: "Art. 41.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art42",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec3",
+            name: "Art. 42.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec3",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Seção III",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art43",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec4",
+            name: "Art. 43.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3_cap7_sec4",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            name: "Seção IV",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit3",
+            parent: "CONSTITUICAO_1988",
+            name: "TÍTULO III",
+            text: "Da Organização do Estado",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art44",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec1",
+            name: "Art. 44.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art45",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec1",
+            name: "Art. 45.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art46",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec1",
+            name: "Art. 46.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art47",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec1",
+            name: "Art. 47.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art48",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec2",
+            name: "Art. 48.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art49",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec2",
+            name: "Art. 49.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art50",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec2",
+            name: "Art. 50.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art51",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec3",
+            name: "Art. 51.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec3",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção III",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art52",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec4",
+            name: "Art. 52.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec4",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção IV",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art53",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec5",
+            name: "Art. 53.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art54",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec5",
+            name: "Art. 54.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art55",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec5",
+            name: "Art. 55.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art56",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec5",
+            name: "Art. 56.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec5",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção V",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art57",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec6",
+            name: "Art. 57.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec6",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção VI",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art58",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec7",
+            name: "Art. 58.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec7",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção VII",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec8_sub1",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec8",
+            name: "Subseção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec8_sub2",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec8",
+            name: "Subseção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec8_sub3",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec8",
+            name: "Subseção III",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec8",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção VIII",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art70",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec9",
+            name: "Art. 70.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art71",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec9",
+            name: "Art. 71.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art72",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec9",
+            name: "Art. 72.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art73",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec9",
+            name: "Art. 73.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art74",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec9",
+            name: "Art. 74.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art75",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec9",
+            name: "Art. 75.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap1_sec9",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção IX",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art76",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec1",
+            name: "Art. 76.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art77",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec1",
+            name: "Art. 77.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art78",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec1",
+            name: "Art. 78.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art79",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec1",
+            name: "Art. 79.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art80",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec1",
+            name: "Art. 80.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art81",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec1",
+            name: "Art. 81.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art82",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec1",
+            name: "Art. 82.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art83",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec1",
+            name: "Art. 83.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art84",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec2",
+            name: "Art. 84.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art85",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec3",
+            name: "Art. 85.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art86",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec3",
+            name: "Art. 86.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec3",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção III",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art87",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec4",
+            name: "Art. 87.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art88",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec4",
+            name: "Art. 88.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec4",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção IV",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec5_sub1",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec5",
+            name: "Subseção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec5_sub2",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec5",
+            name: "Subseção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap2_sec5",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção V",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art92",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec1",
+            name: "Art. 92.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art93",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec1",
+            name: "Art. 93.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art94",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec1",
+            name: "Art. 94.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art95",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec1",
+            name: "Art. 95.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art96",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec1",
+            name: "Art. 96.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art97",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec1",
+            name: "Art. 97.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art98",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec1",
+            name: "Art. 98.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art99",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec1",
+            name: "Art. 99.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art100",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec1",
+            name: "Art. 100.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art101",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec2",
+            name: "Art. 101.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art102",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec2",
+            name: "Art. 102.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art103",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec2",
+            name: "Art. 103.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art103-1,emc-45-2004-12-08",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec2",
+            name: "Art. 103-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art103-2,emc-45-2004-12-08",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec2",
+            name: "Art. 103-B.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art104",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec3",
+            name: "Art. 104.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art105",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec3",
+            name: "Art. 105.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec3",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção III",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art106",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec4",
+            name: "Art. 106.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art107",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec4",
+            name: "Art. 107.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art108",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec4",
+            name: "Art. 108.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art109",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec4",
+            name: "Art. 109.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art110",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec4",
+            name: "Art. 110.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec4",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção IV",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art111",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec5",
+            name: "Art. 111.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art111-1,emc-45-2004-12-08",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec5",
+            name: "Art. 111-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art112",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec5",
+            name: "Art. 112.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art113",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec5",
+            name: "Art. 113.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art114",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec5",
+            name: "Art. 114.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art115",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec5",
+            name: "Art. 115.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art116",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec5",
+            name: "Art. 116.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art117",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec5",
+            name: "Art. 117.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec5",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção V",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art118",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec6",
+            name: "Art. 118.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art119",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec6",
+            name: "Art. 119.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art120",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec6",
+            name: "Art. 120.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art121",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec6",
+            name: "Art. 121.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec6",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção VI",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art122",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec7",
+            name: "Art. 122.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art123",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec7",
+            name: "Art. 123.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art124",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec7",
+            name: "Art. 124.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec7",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção VII",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art125",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec8",
+            name: "Art. 125.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art126",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec8",
+            name: "Art. 126.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap3_sec8",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção VIII",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art127",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec1",
+            name: "Art. 127.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art128",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec1",
+            name: "Art. 128.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art129",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec1",
+            name: "Art. 129.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art130",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec1",
+            name: "Art. 130.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art130-1,emc-45-2004-12-08",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec1",
+            name: "Art. 130-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art131",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec2",
+            name: "Art. 131.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art132",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec2",
+            name: "Art. 132.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art133",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec3",
+            name: "Art. 133.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art134",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec3",
+            name: "Art. 134.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art135",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec3",
+            name: "Art. 135.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec3",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção III",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art134,emc-80-2014-06-04",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec4",
+            name: "Art. 134.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art135,emc-80-2014-06-04",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec4",
+            name: "Art. 135.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4_cap4_sec4",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            name: "Seção IV",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit4",
+            parent: "CONSTITUICAO_1988",
+            name: "TÍTULO IV",
+            text: "Da Organização dos Poderes",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art136",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5_cap1_sec1",
+            name: "Art. 136.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5_cap1_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art137",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5_cap1_sec2",
+            name: "Art. 137.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art138",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5_cap1_sec2",
+            name: "Art. 138.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art139",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5_cap1_sec2",
+            name: "Art. 139.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5_cap1_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art140",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5_cap1_sec3",
+            name: "Art. 140.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art141",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5_cap1_sec3",
+            name: "Art. 141.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5_cap1_sec3",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5",
+            name: "Seção III",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art142",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5",
+            name: "Art. 142.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art143",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5",
+            name: "Art. 143.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art144",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5",
+            name: "Art. 144.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit5",
+            parent: "CONSTITUICAO_1988",
+            name: "TÍTULO V",
+            text: "Da Defesa do Estado e das Instituições Democráticas",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art145",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec1",
+            name: "Art. 145.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art146",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec1",
+            name: "Art. 146.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art146-1,emc-42-2003-12-19",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec1",
+            name: "Art. 146-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art147",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec1",
+            name: "Art. 147.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art148",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec1",
+            name: "Art. 148.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art149",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec1",
+            name: "Art. 149.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art149-1,emc-39-2002-12-19",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec1",
+            name: "Art. 149-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art150",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec2",
+            name: "Art. 150.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art151",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec2",
+            name: "Art. 151.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art152",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec2",
+            name: "Art. 152.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art153",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec3",
+            name: "Art. 153.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art154",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec3",
+            name: "Art. 154.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec3",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6",
+            name: "Seção III",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art155",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec4",
+            name: "Art. 155.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec4",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6",
+            name: "Seção IV",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art156",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec5",
+            name: "Art. 156.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec5",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6",
+            name: "Seção V",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art157",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec6",
+            name: "Art. 157.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art158",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec6",
+            name: "Art. 158.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art159",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec6",
+            name: "Art. 159.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art160",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec6",
+            name: "Art. 160.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art161",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec6",
+            name: "Art. 161.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art162",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec6",
+            name: "Art. 162.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap1_sec6",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6",
+            name: "Seção VI",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art163",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec1",
+            name: "Art. 163.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art163-1,emc-108-2020-08-26",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec1",
+            name: "Art. 163-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art164",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec1",
+            name: "Art. 164.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art164-1,emc-109-2021-03-15",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec1",
+            name: "Art. 164-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art165",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 165.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art166",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 166.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art166-1,emc-105-2019-12-12",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 166-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art167",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 167.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art167-1,emc-109-2021-03-15",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 167-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art167-2,emc-109-2021-03-15",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 167-B.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art167-3,emc-109-2021-03-15",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 167-C.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art167-4,emc-109-2021-03-15",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 167-D.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art167-5,emc-109-2021-03-15",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 167-E.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art167-6,emc-109-2021-03-15",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 167-F.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art167-7,emc-109-2021-03-15",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 167-G.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art168",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 168.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art169",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            name: "Art. 169.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6_cap2_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit6",
+            parent: "CONSTITUICAO_1988",
+            name: "TÍTULO VI",
+            text: "Da Tributação e do Orçamento",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art170",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 170.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art171",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 171.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art172",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 172.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art173",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 173.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art174",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 174.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art175",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 175.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art176",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 176.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art177",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 177.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art178",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 178.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art179",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 179.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art180",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 180.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art181",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 181.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art182",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 182.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art183",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 183.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art184",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 184.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art185",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 185.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art186",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 186.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art187",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 187.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art188",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 188.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art189",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 189.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art190",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 190.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art191",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 191.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art192",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            name: "Art. 192.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit7",
+            parent: "CONSTITUICAO_1988",
+            name: "TÍTULO VII",
+            text: "Da Ordem Econômica e Financeira",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art193",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 193.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art194",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec1",
+            name: "Art. 194.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art195",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec1",
+            name: "Art. 195.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art196",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec2",
+            name: "Art. 196.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art197",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec2",
+            name: "Art. 197.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art198",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec2",
+            name: "Art. 198.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art199",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec2",
+            name: "Art. 199.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art200",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec2",
+            name: "Art. 200.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art201",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec3",
+            name: "Art. 201.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art202",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec3",
+            name: "Art. 202.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec3",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Seção III",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art203",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec4",
+            name: "Art. 203.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art204",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec4",
+            name: "Art. 204.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap2_sec4",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Seção IV",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art205",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 205.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art206",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 206.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art207",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 207.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art208",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 208.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art209",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 209.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art210",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 210.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art211",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 211.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art212",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 212.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art212-1,emc-108-2020-08-26",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 212-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art213",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 213.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art214",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            name: "Art. 214.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec1",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Seção I",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art215",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec2",
+            name: "Art. 215.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art216",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec2",
+            name: "Art. 216.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art216-1,emc-71-2012-11-29",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec2",
+            name: "Art. 216-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec2",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Seção II",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art217",
+            parent:
+              "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec3",
+            name: "Art. 217.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8_cap3_sec3",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Seção III",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art218",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 218.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art219",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 219.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art219-1,emc-85-2015-02-26",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 219-A.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art219-2,emc-85-2015-02-26",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 219-B.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art220",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 220.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art221",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 221.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art222",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 222.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art223",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 223.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art224",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 224.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art225",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 225.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art226",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 226.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art227",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 227.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art228",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 228.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art229",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 229.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art230",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 230.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art231",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 231.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art232",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            name: "Art. 232.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit8",
+            parent: "CONSTITUICAO_1988",
+            name: "TÍTULO VIII",
+            text: "Da Ordem Social",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art233",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 233.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art234",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 234.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art235",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 235.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art236",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 236.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art237",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 237.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art238",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 238.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art239",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 239.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art240",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 240.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art241",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 241.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art242",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 242.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art243",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 243.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art244",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 244.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art245",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 245.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art246,emc-6-1995-08-15",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 246.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art247,emc-19-1998-06-04",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 247.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art248,emc-20-1998-12-15",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 248.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art249,emc-20-1998-12-15",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 249.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!art250,emc-20-1998-12-15",
+            parent: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            name: "Art. 250.",
+          },
+          {
+            id: "urn:lex:br:federal:constituicao:1988-10-05;1988!tit9",
+            parent: "CONSTITUICAO_1988",
+            name: "TÍTULO IX",
+            text: "Das Disposições Constitucionais Gerais",
           },
         ];
 
         let chartConfig = {
           type: "tree",
           options: {
+            zooming: true,
+            //progression: 0.5,
+            //orgChart: true,
+            //packingFactor: 10.
             aspect: "tree-down",
+            maxLinkWidth: 35,
+            //maxIterations: "1",
             link: {
               aspect: "side-between",
             },
-            maxSize: 15,
-            minSize: 5,
+            maxSize: 30,
+            minSize: 15,
             node: {
               type: "circle",
               tooltip: {
