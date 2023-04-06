@@ -1,0 +1,21 @@
+{
+  "name": "cytoscape-dagre-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "cytoscape": "^3.23.0",
+    "cytoscape-dagre": "^2.5.0",
+    "cytoscape-expand-collapse": "^4.1.0",
+    "cytoscape-fcose": "^2.2.0",
+    "cytoscape-node-editing": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/cytoscape": "^3.19.9",
+    "parcel-bundler": "^1.12.5"
+  }
+}
