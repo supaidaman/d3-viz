@@ -9,10 +9,13 @@
   },
   "dependencies": {
     "cytoscape": "^3.23.0",
+    "cytoscape-context-menus": "^4.1.0",
     "cytoscape-dagre": "^2.5.0",
     "cytoscape-expand-collapse": "^4.1.0",
     "cytoscape-fcose": "^2.2.0",
-    "cytoscape-node-editing": "^4.1.0"
+    "cytoscape-navigator": "^2.0.2",
+    "cytoscape-node-editing": "^4.1.0",
+    "cytoscape-node-html-label": "^1.2.2"
   },
   "devDependencies": {
     "@types/cytoscape": "^3.19.9",
